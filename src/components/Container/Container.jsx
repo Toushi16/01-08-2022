@@ -73,8 +73,8 @@ const Container = () => {
                 <span>Advice number #{advice.id}</span>
             </div>
 
-            <Button onClick={ () => dispatch ({ type:'previous'})} disabled={ state.count >= data.length - 1 } textContent='Previous' />
-            <Button onClick={ () => dispatch ({ type:'next'})} disabled={ state.count >= data.length + 1 } textContent='Next' />
+            <Button onClick={ () => dispatch ({ type:'previous'})} disabled={ state.count < 1 } textContent='Previous' />
+            <Button onClick={ () => dispatch ({ type:'next'})} disabled={ state.count >= data.length - 1 } textContent='Next' />
         </div>
     );
 };
